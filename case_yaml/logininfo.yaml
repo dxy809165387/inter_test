@@ -1,0 +1,33 @@
+-
+  method: POST
+  url: /auth/oauth/token
+  type: AE
+
+  headers:
+    api-version: '1.0'
+    path: /login
+    authorization: Basic d2ViLWNsaWVudDpUVFNTT0RtQUJwRVNCTUZSYXpPb0ZwdEhFa2FsV3loVw==
+
+  data:
+    username: Test_OVH_AE
+    password: afdd0b4ad2ec172c586e2150770fbf9e
+    grant_type: password
+    remember: true
+    scope: all
+
+-
+  method: POST
+  url: /auth/oauth/token
+  type: MJ
+
+  headers:
+    api-version: '1.0'
+    path: /login
+    authorization: Basic d2ViLWNsaWVudDpUVFNTT0RtQUJwRVNCTUZSYXpPb0ZwdEhFa2FsV3loVw==
+
+  data:
+    username: Test_OVH_MJ
+    password: afdd0b4ad2ec172c586e2150770fbf9e
+    grant_type: password
+    remember: true
+    scope: all
