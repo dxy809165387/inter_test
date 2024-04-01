@@ -14,8 +14,7 @@ rootpath = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def gettoken():
     datas = read_yaml(rootpath + '\\case_yaml\\logininfo.yaml')
     for data in datas:
-        datatype = data["type"]
-        del data["type"]
+        datatype = data.pop('type')
         rsp = RequestsCom().send_request(data)[0]
         datadump = {datatype: 'Bearer '+rsp.json()["content"]["access_token"]}
         write_yaml(rootpath + '\\case_yaml\\cach.yaml', datadump)
